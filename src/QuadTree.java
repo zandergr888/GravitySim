@@ -1,5 +1,5 @@
 public class QuadTree {
-    private static final double G = 1;  // Gravitational constant
+    private static final double G = 39.5;  // Gravitational constant
     private static final int MAX_CAPACITY = 1;  // Maximum bodies a node can hold before partitioning
     private double xCenter, yCenter, length;  // Center and length of this quad
     private Planet body;  // Body held by this quad
@@ -63,7 +63,7 @@ public class QuadTree {
     public double[] calculateForce(Planet body, double theta) {
         double dx = xCenterOfMass - body.getXPos();
         double dy = yCenterOfMass - body.getYPos();
-        double softening = 1e2;
+        double softening = 160;
         double distance = Math.sqrt(dx * dx + dy * dy);
         distance += softening;
         if (this.body != null && this.body != body) {

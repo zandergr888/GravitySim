@@ -21,8 +21,6 @@ public class Planet {
         this.color = color;
     }
 
-
-
     public String getName() {
         return name;
     }

@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 public class GravitySimulation extends JPanel {
     private static final int WIDTH = 1200;
     private static final int HEIGHT = 900;
-    private static final double G = 10; // Gravitational constant
     private Planet[] planets;
 
     public GravitySimulation(Planet[] planets) {
@@ -27,7 +26,9 @@ public class GravitySimulation extends JPanel {
 
         // For each planet, calculate the total force acting on it and update its velocity and position
         for (Planet planet : planets) {
+            if (planet.getName().equals("Sun")) continue; // The sun does not move
             double[] force = qt.calculateForce(planet, 0.5); // You can adjust the theta value as needed
+
             planet.updateVelocity(force[0], force[1]);
             planet.updatePosition();
         }
@@ -56,14 +57,15 @@ public class GravitySimulation extends JPanel {
     public static void main(String[] args) {
         // Create an array of planets
         Random rand = new Random();
-        Planet[] planets = new Planet[500];
-        //planets[0] = new Planet("Sun", 10000, 100 , WIDTH / 2, HEIGHT / 2, 0, 0, Color.YELLOW);
-        for (int i = 0; i < 500; i++) {
+
+        Planet[] planets = new Planet[1000];
+        planets[0] = new Planet("Sun", 125, 50, WIDTH / 2, HEIGHT / 2, 0, 0, Color.YELLOW);
+        for (int i = 1; i < 1000; i++) {
             int x, y;
             do {
                 // Generate random positions within the width and height of your space
-                x = WIDTH/3 + rand.nextInt(WIDTH/3);
-                y = HEIGHT/3 + rand.nextInt(HEIGHT/3);
+                x = rand.nextInt(WIDTH/3);
+                y = rand.nextInt(HEIGHT/3) + 100;
             } while (positionOverlaps(x, y, planets)); // Checks if this position overlaps with any existing planet
 
             // Generate a random color for the planet
@@ -74,7 +76,7 @@ public class GravitySimulation extends JPanel {
 
             // Use the generated position and color to create the new planet
 
-            planets[i] = new Planet("Planet" + (i + 1), 1,1 + Math.random() * 3, x, y, 0, -0.001, randomColor);
+            planets[i] = new Planet("Planet" + (i + 1), 0.1,3 + Math.random() * 3, x, y, 0.2, 0, randomColor);
         }
 
         JFrame frame = new JFrame("Gravity Simulation");
