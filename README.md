@@ -18,7 +18,7 @@ The simulation provides a visual representation of celestial bodies influenced b
 
 ### Visualization
 ![](
-https://github.com/zandergr888/GravitySim/blob/master/gravity2000_AdobeExpress.gif
+https://github.com/zandergr888/GravitySim/blob/master/grav3000gif.gif
 )
 ![](
 https://github.com/zandergr888/GravitySim/blob/master/gifSolar.gif
