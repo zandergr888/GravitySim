@@ -58,13 +58,13 @@ public class GravitySimulation extends JPanel {
         // Create an array of planets
         Random rand = new Random();
 
-        Planet[] planets = new Planet[2000];
-        for (int i = 0; i < 2000; i++) {
+        Planet[] planets = new Planet[100000];
+        for (int i = 0; i < 100000; i++) {
             int x, y;
             do {
                 // Generate random positions within the width and height of your space
-                x = rand.nextInt(WIDTH/3) + 300;
-                y = rand.nextInt(HEIGHT/3) + 100;
+                x = rand.nextInt(WIDTH);
+                y = rand.nextInt(HEIGHT);
             } while (positionOverlaps(x, y, planets)); // Checks if this position overlaps with any existing planet
 
             // Generate a random color for the planet
@@ -75,7 +75,7 @@ public class GravitySimulation extends JPanel {
 
             // Use the generated position and color to create the new planet
 
-            planets[i] = new Planet("Planet" + (i + 1), 2,3 + Math.random() * 3, x, y, 0, 0, randomColor);
+            planets[i] = new Planet("Planet" + (i + 1), 2,1, x, y, 0, 0, randomColor);
         }
 
         JFrame frame = new JFrame("Gravity Simulation");
