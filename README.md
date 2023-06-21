@@ -6,7 +6,7 @@ This is a gravity simulation project that utilizes the Barnes-Hut algorithm to e
 
 The gravity simulation uses the Barnes-Hut algorithm, which is an approximation algorithm that reduces the computational complexity of calculating gravitational forces in a system with a large number of celestial bodies. It improves performance by dividing the space into a hierarchical tree structure and approximating distant clusters of bodies as a single entity.
 
-The simulation provides a visual representation of celestial bodies influenced by gravity. It demonstrates the motion of the celestial bodies as they interact and orbit around each other.
+The simulation provides a visual representation of celestial bodies influenced by gravity. It demonstrates the motion of the celestial bodies as they interact and orbit around each other. On my computer, I could simulate as many as around 50000 celestial bodies
 
 ## Features
 
@@ -34,7 +34,7 @@ https://github.com/zandergr888/GravitySim/blob/master/gifSolar.gif
 1. Clone the repository:
 
    ```bash
-   https://github.com/zandergr888/GravitySim.git
+   git clone https://github.com/zandergr888/GravitySim.git
 
 
 2. Build the project using your preferred build tool or IDE.
