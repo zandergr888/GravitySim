@@ -17,6 +17,12 @@ The simulation provides a visual representation of celestial bodies influenced b
 
 
 ### Visualization
+![](
+https://github.com/zandergr888/GravitySim/blob/master/gravity2000_AdobeExpress.gif
+)
+![](
+https://github.com/zandergr888/GravitySim/blob/master/gifSolar.gif
+)
 
 ## Requirements
 
@@ -29,3 +35,10 @@ The simulation provides a visual representation of celestial bodies influenced b
 
    ```bash
    https://github.com/zandergr888/GravitySim.git
+
+
+2. Build the project using your preferred build tool or IDE.
+
+3. Run the simulation by executing the main class.
+
+4. Explore the simulation interface and observe the celestial bodies as they interact and move under the influence of gravity.
