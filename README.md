@@ -19,10 +19,14 @@ A user-friendly, interactive interface that allows users to explore and experime
 ![](
 https://github.com/zandergr888/GravitySim/blob/master/grav3000gif.gif
 )
+
 The above shows a simulation of 3000 celestial bodies. The simulation is able to handle hundreds of thousands of bodies in real-time.
+
+
 ![](
 https://github.com/zandergr888/GravitySim/blob/master/gifSolar.gif
 )
+
 The above shows a simulation of a solar system. 
 
 ## Requirements
